@@ -36,4 +36,3 @@ def update_task(db: Session, task_id: int, updated_data: dict) -> models.Task | 
     db.commit()
     db.refresh(task)
     return task
- 
