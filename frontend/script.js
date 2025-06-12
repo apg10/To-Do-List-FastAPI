@@ -45,7 +45,7 @@ async function loadTasks() {
       const completeBtn = document.createElement("button");
       completeBtn.textContent = task.is_completed ? "✔️" : "✅";
       completeBtn.onclick = async () => {
-        await fetch(API_URL + `/${task.id}`, {
+        await fetch(API_URL + `/tasks/${task.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ is_completed: !task.is_completed }),
@@ -57,7 +57,7 @@ async function loadTasks() {
       const deleteBtn = document.createElement("button");
       deleteBtn.textContent = "🗑️";
       deleteBtn.onclick = async () => {
-        await fetch(API_URL + `/${task.id}`, { method: "DELETE" });
+        await fetch(API_URL + `/tasks/${task.id}`, { method: "DELETE" });
         loadTasks();
       };
 
