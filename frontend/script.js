@@ -12,7 +12,7 @@ form.addEventListener("submit", async (e) => {
   const description = document.getElementById("description").value;
   const progress = document.getElementById("progress").value;
 
-  await fetch(API_URL + "/", {
+  await fetch(API_URL + "/tasks/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title, description, progress }),
@@ -24,7 +24,7 @@ form.addEventListener("submit", async (e) => {
 
 // Load and display tasks
 async function loadTasks() {
-  const res = await fetch(API_URL + "/");
+  const res = await fetch(API_URL + "/tasks/");
   const tasks = await res.json();
 
   list.innerHTML = "";
