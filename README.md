@@ -75,21 +75,15 @@ This project is part of a personal backend portfolio, focusing on building clean
 Create and activate a virtual environment:
 
 bash
-Copiar
-Editar
 python -m venv venv
 venv\Scripts\activate  # On Windows
 Install dependencies:
 
 bash
-Copiar
-Editar
 pip install -r requirements.txt
 Run the API:
 
 bash
-Copiar
-Editar
 uvicorn app.main:app --reload
 Open http://127.0.0.1:8000/docs for Swagger UI.
 
