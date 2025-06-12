@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/tasks";
+const API_URL = "https://to-do-list-fastapi.onrender.com";
 
 const form = document.getElementById("task-form");
 const list = document.getElementById("task-list");
