@@ -8,25 +8,28 @@
 <body>
   <h1>My Tasks</h1>
 
-  <!-- Form to create a new task -->
+  <!-- Form to add a new task -->
   <form id="task-form">
     <input type="text" id="title" placeholder="Title" required />
     <input type="text" id="description" placeholder="Description" />
-    
-    <!-- Dropdown to choose task progress -->
     <select id="progress">
       <option value="starting">Starting</option>
       <option value="in_progress">In Progress</option>
       <option value="almost_done">Almost Done</option>
     </select>
-
     <button type="submit">Add Task</button>
   </form>
 
-  <!-- List to display existing tasks -->
+  <!-- Filter tasks by completion status -->
+  <label for="filter">Filter:</label>
+  <select id="filter">
+    <option value="all">All</option>
+    <option value="completed">Completed</option>
+    <option value="not_completed">Not Completed</option>
+  </select>
+
   <ul id="task-list"></ul>
 
-  <!-- Link to external JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>
