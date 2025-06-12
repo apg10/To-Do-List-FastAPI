@@ -1,4 +1,4 @@
-const API_URL = "https://to-do-list-fastapi.onrender.com";
+const API_URL = "https://to-do-list-fastapi.onrender.com/tasks";
 
 const form = document.getElementById("task-form");
 const list = document.getElementById("task-list");
