@@ -1,91 +1,74 @@
-# 📝 EasyToDo API & Frontend
+📝 EasyToDo – Task Manager API + Frontend
+EasyToDo is a clean, fully functional To-Do List application built with FastAPI for the backend and a static frontend using HTML + JavaScript. It supports complete CRUD operations, status filtering, and live progress tracking.
 
-This is a simple and fully functional **To-Do List** project built with **FastAPI** (Python) and a static frontend in **HTML + JavaScript**. It includes full CRUD functionality, task filtering, progress tracking, and live deployment.
+🚀 Live Demo
+🌐 Frontend deployed on Netlify:
+👉 https://easytodo01.netlify.app
 
-## 🚀 Live Demo
+⚠️ The backend must run locally at http://127.0.0.1:8000 for full functionality.
 
-🌐 Frontend deployed on Netlify:  
-👉 [https://easytodo01.netlify.app](https://easytodo01.netlify.app)
-
-> ⚠️ The backend must be running locally at `http://127.0.0.1:8000` for the frontend to work.
-
----
-
-## 🧱 Project Structure
-
+🧱 Project Structure
+pgsql
+Copy
+Edit
 todo-api-fastapi/
-├── app/ ← FastAPI backend (API)
-│ ├── main.py
-│ ├── models.py
-│ ├── crud.py
-│ ├── schemas.py
-│ └── database.py
-├── frontend/ ← HTML + JS frontend
-│ ├── index.html
-│ └── script.js
+├── app/               # FastAPI backend
+│   ├── main.py
+│   ├── models.py
+│   ├── crud.py
+│   ├── schemas.py
+│   └── database.py
+├── frontend/          # Static frontend
+│   ├── index.html
+│   └── script.js
 ├── requirements.txt
 └── README.md
+⚙️ Features
+✅ Add, edit, and delete tasks
 
+✅ Track task progress (starting, in_progress, almost_done)
 
----
+✅ Mark tasks as completed
 
-## ⚙️ Features
+✅ Filter tasks by status
 
-- ✅ Add, edit, delete tasks
-- ✅ Track task progress (`starting`, `in_progress`, `almost_done`)
-- ✅ Mark tasks as completed
-- ✅ Filter tasks by completion status
-- ✅ Simple and clean UI
-- ✅ Fully functional API with FastAPI + SQLite
-- ✅ Frontend hosted for public access via Netlify
+✅ Lightweight and clean UI
 
----
+✅ Fully functional REST API (FastAPI + SQLite)
 
-## 📡 API Endpoints (FastAPI)
+✅ Deployed frontend with Netlify
 
-| Method | Endpoint           | Description                |
-|--------|--------------------|----------------------------|
-| GET    | `/tasks/`          | Get all tasks              |
-| GET    | `/tasks/{id}`      | Get a specific task        |
-| POST   | `/tasks/`          | Create a new task          |
-| PUT    | `/tasks/{id}`      | Update task (progress, status) |
-| DELETE | `/tasks/{id}`      | Delete a task              |
+📡 API Endpoints
+Method	Endpoint	Description
+GET	/tasks/	Retrieve all tasks
+GET	/tasks/{id}	Retrieve a single task
+POST	/tasks/	Create a new task
+PUT	/tasks/{id}	Update task content or status
+DELETE	/tasks/{id}	Delete a task
 
----
+🛠 Tech Stack
+Backend: Python, FastAPI, SQLAlchemy, SQLite
 
-## 🛠 Tech Stack
+Frontend: HTML, JavaScript (Vanilla), Fetch API
 
-- **Backend:** Python, FastAPI, SQLAlchemy, SQLite
-- **Frontend:** HTML, Vanilla JS, Fetch API
-- **Deploy:** Netlify (frontend), local backend
+Deployment: Netlify (frontend), Localhost (backend)
 
----
+🧠 Developer Notes
+This project is part of my backend portfolio to demonstrate API development and frontend integration. It was designed to be simple, modular, and easy to expand. Future improvements may include backend deployment, authentication, and multi-user support.
 
-## 🧑‍💻 Developer Notes
-
-This project is part of a personal backend portfolio, focusing on building clean, working APIs connected to minimal frontends. Future enhancements may include full deployment of the backend and user authentication.
-
----
-
-## 📦 Local Setup (optional)
-
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/your-username/todo-api-fastapi
-Create and activate a virtual environment:
-
+⚙️ Local Setup (optional)
 bash
+Copy
+Edit
+git clone https://github.com/your-username/todo-api-fastapi
+cd todo-api-fastapi
 python -m venv venv
-venv\Scripts\activate  # On Windows
-Install dependencies:
-
-bash
+source venv/bin/activate      # On Unix/Mac
+venv\Scripts\activate         # On Windows
 pip install -r requirements.txt
-Run the API:
-
-bash
 uvicorn app.main:app --reload
-Open http://127.0.0.1:8000/docs for Swagger UI.
+Visit http://127.0.0.1:8000/docs for interactive Swagger API documentation.
 
 📬 Contact
-Feel free to reach out via GitHub issues or connect for collaboration opportunities.
+Open to collaboration and freelance opportunities.
+You can reach me via GitHub or at adrianlive1024@gmail.com
